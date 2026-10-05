@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #FFFFFF;
+  --bg-soft: #FAF9F6;
+  --bg-warm: #F7F5F0;
+  --bg-elevated: #F4F1EA;
+
+  --text-primary: #111111;
+  --text-secondary: #3D3B38;
+  --text-muted: #716D66;
+
+  --gold: #9E7B34;
+  --gold-bright: #C9A55C;
+  --gold-light: #E7CF91;
+  --gold-dark: #6E531D;
+
+  --line: rgba(182, 141, 64, 0.22);
+  --line-soft: rgba(0, 0, 0, 0.08);
+
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  color: #111111;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Luxury Scrollbar for White Aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF9F6;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(182, 141, 64, 0.35);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(182, 141, 64, 0.65);
+}
+
+/* Rich Burnished Champagne Gold Gradients */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #B68D40 0%, #9E7B34 50%, #6E531D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #D4AF37 0%, #C9A55C 50%, #9E7B34 100%);
+}
+
+.gold-border {
+  border: 1px solid rgba(182, 141, 64, 0.25);
+}
+
+.gold-border-subtle {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.gold-glow {
+  box-shadow: 0 4px 20px rgba(182, 141, 64, 0.16);
+}
+
+/* Luxury Button System */
+.btn-primary {
+  background: linear-gradient(135deg, #E2C275 0%, #C9A55C 50%, #A67C2E 100%);
+  color: #111111;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(182, 141, 64, 0.22);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(182, 141, 64, 0.35);
+}
+
+.btn-secondary {
+  background: #FFFFFF;
+  border: 1px solid rgba(182, 141, 64, 0.5);
+  color: #111111;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.btn-secondary:hover {
+  background: #9E7B34;
+  border-color: #9E7B34;
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(182, 141, 64, 0.25);
+}
+
+/* Glassmorphism & Header */
+.luxury-glass {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(182, 141, 64, 0.18);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Hide cursor on touch devices or reduced motion */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .custom-cursor {
+    display: none !important;
+  }
+}
